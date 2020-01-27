@@ -1,0 +1,9 @@
+.Photo {
+
+    .img-01 {
+        @include block-size(100px, 102px);
+        border-radius: 50%;
+        @include shadowbox();
+        border:solid 2px #41403E;
+    }
+}

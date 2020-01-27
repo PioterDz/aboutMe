@@ -1,0 +1,27 @@
+.Message {
+    display: none;
+    font-size: calc(10px + 2vmin);
+    color: $font-alt;
+    background-color: $first;
+    margin: 50px;
+    align-self:center;
+    padding:1rem 1rem;
+    margin:0 1rem;
+    letter-spacing:1px;
+    outline:none;
+    @include shadowbox();
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border:solid 2px #41403E;
+    animation: drop 0.3s show 0.3s ease-in-out;
+}
+
+.show {
+    display: block;
+}
+
+.prev {
+    display: block;
+    transition: 0.3s ease-in-out;
+    transform: translateY(200px);
+}
+

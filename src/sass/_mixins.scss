@@ -1,0 +1,15 @@
+@mixin block-size($width, $height) {
+    box-sizing: border-box;
+    width: $width;
+    height: $height;
+}
+
+@mixin shadowbox() {
+    box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+}
+
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
