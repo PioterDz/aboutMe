@@ -4,15 +4,26 @@ import NavBar from '../NavBar/NavBar';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 
-const MainLayout = () => {
+class MainLayout extends React.Component {
 
-    return (
-        <div className="MainLayout">
-            <NavBar />
-            <Main />
-            <Footer />
-        </div>
-    );
+    componentDidMount() {
+        setTimeout(this.func, 12000);
+    }
+
+    func() {
+        console.log('BANG');
+    }
+
+    render() {
+        return (
+            <div className="MainLayout">
+                <NavBar />
+                <Main />
+                <Footer />
+            </div>
+        );
+    }
+
 }
 
 export default MainLayout;

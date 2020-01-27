@@ -4,47 +4,43 @@ import { uuid } from 'uuidv4';
 import LoadSpinner from '../../common/Spinner/Spinner';
 import Message from '../../common/Message/Message';
 import msgContent from '../../../data/msgContent';
+import Audio from '../../common/Audio/Audio';
 
 class Messages extends React.Component {
     constructor() {
         super();
         this.state = {
-            msgId: 1
+            msgId: 0
         };
     }
 
-    
-
     componentDidMount() {
-        this.setInt = setInterval(this.msgInterval, 10000);
+        this.setInt = setInterval(this.msgInterval, 3000);
     }
 
     msgInterval = () => { 
         this.setState({ msgId: this.state.msgId + 1 });
-        if(this.state.msgId > 3) clearInterval(this.setInt);
+        if(this.state.msgId >= msgContent.length + (msgContent.length - 1)) clearInterval(this.setInt);
     }
 
     render() {
         const { msgId } = this.state; 
-        console.log(msgId);
 
-        if(msgId > 4) clearInterval(this.setInt);
-
-        // if(!msgContent) {
-        //     return <LoadSpinner />
-        // } else {
-            return (
-                msgId % 2 !== 0 ? <LoadSpinner key={uuid()} /> :
-                msgContent.map((elem, idx) => { 
-                    return <Message 
+        return (
+            msgId === 0 || msgId % 2 === 0 ? <LoadSpinner /> :
+            msgContent.map((elem, idx) => {
+                return <div key={uuid()}>
+                    <Message 
                         key={uuid()} 
                         text={elem} 
                         nameOfClass={`msg-${idx}`}
-                        show={msgId === idx + 2 ? 'show' : (msgId === idx - 1 ?  'prev' : '')}  
-                    />;
-                })
-            );
-        // } 
+                        show={msgId === idx + (idx + 1) ? 'show' : ''}
+                    />
+                    <Audio key={uuid()} source="pop.wav" />
+                </div>
+                
+            })
+        );
     }
 }
 

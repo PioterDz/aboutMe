@@ -1,4 +1,10 @@
 .Chat {
-    @include flex(flex-start, flex-start);
+    @include flex(flex-start, center);
     margin: 25% 0 0 15%;
+    position: relative;
+
+    .Spinner {
+        transform: scale(0.5);
+        align-self: center;
+    }
 }
