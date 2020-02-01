@@ -3,7 +3,7 @@ import React from 'react';
 import Messages from '../Messages/Messages';
 import Photo from '../../common/Photo/Photo';
 
-function Chat() {
+function IntroChat() {
   return (
     <div className="Chat">
       <Photo source='meSec.jpg' alt='it is me' classNb='01' />
@@ -12,4 +12,4 @@ function Chat() {
   );
 }
 
-export default Chat;
+export default IntroChat;

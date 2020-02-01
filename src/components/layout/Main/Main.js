@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Chat from '../../features/Chat/Chat';
+import IntroChat from '../../features/Chat/Chat';
+import Page from '../../pages/Page/Page';
 
 const Main = () => {
     
-    return (
-        <Chat />
-    );
+    if(false) return <IntroChat />
+    else return <Page />
 
 }
 

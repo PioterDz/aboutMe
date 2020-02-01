@@ -10,10 +10,6 @@ class MainLayout extends React.Component {
         setTimeout(this.func, 12000);
     }
 
-    func() {
-        console.log('BANG');
-    }
-
     render() {
         return (
             <div className="MainLayout">

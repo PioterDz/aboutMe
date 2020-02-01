@@ -20,6 +20,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: yellow;
 }
 
 code {
@@ -34,10 +35,13 @@ code {
 @import './sass/components/app';
 @import './sass/components//mainLayout';
 
+@import './sass/components/page';
+@import './sass/components/navbar';
 @import './sass/components/footer';
 
 @import './sass/components/message'; 
 @import './sass/components/photo';
 @import './sass/components/chat';
+
 
 
