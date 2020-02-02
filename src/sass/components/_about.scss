@@ -1,0 +1,34 @@
+.About {
+    @include flex(flex-start, center);
+    
+    .about--text {
+
+        h2 {
+            background-color: $first;
+        }
+
+        .social--icons {
+            
+            [class*='icon'] {
+                font-size: 40px;
+                margin: 30px;
+            }
+
+            .linkedin--icon {
+                color: $linkedin;
+            }
+
+            .twitter--icon {
+                color: $twitter;
+            }
+
+            .github--icon {
+                color: $github;
+            }
+        }
+    }
+
+    // .img-me-png {
+
+    // }
+}

@@ -1,15 +1,27 @@
 import React from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+
+import { Route, Switch } from "react-router-dom";
 
 import MainLayout from './layout/MainLayout/MainLayout';
+import HomePage from './pages/HomePage/HomePage';
+import Work from './pages/Work/Work';
+import About from './pages/About/About';
+import NoMatch from './pages/NoMatch/NoMatch';
 
-library.add(faBars);
+
 
 function App() {
   return (
     <div className="App">
-      <MainLayout />
+        <MainLayout>
+            <Switch>
+              <Route exact path={['/', '/home']} component={HomePage} />
+              <Route exact path='/work' component={Work} />
+              <Route exact path='/about' component={About} />
+
+              <Route component={NoMatch} />
+            </Switch>
+        </MainLayout>
     </div>
   );
 }

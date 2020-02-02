@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Menu from '../../features/Menu/Menu';
+import Menu from '../Menu/Menu';
 
 const NavBar = () => {
     
