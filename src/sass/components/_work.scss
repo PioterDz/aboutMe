@@ -1,0 +1,50 @@
+.Work {
+    position: relative;
+
+    .circle--center {
+        @include block-size(50px,50px);
+        border: 1px solid black;
+        border-radius: 50%;
+        position: absolute;
+        top: 250px;
+        left: 250px;
+    }
+
+    .projectsCircle--first {
+        @include on-circle(6, 500px, 100px);
+        top: 250px;
+        left: 250px;
+    }
+
+    .projectsCircle--second {
+        @include on-circle(6, 1000px, 100px);
+    }
+
+    [class*='projectsCircle'] {
+        position: absolute;
+        @include flex(center, center);
+        border: solid 5px tomato;
+        animation-duration: 50s;
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+
+        &--second {
+            transform: translate(10px, 10px);
+        }
+
+        .single--preview {
+            border-radius: 50%;
+            @include flex(center, center);
+            background-color: $second;
+            filter: grayscale(100%);
+            border: solid 5px tomato;
+            transition: .15s;
+            
+            &:hover,
+            &:active {
+                filter: grayscale(0);
+                cursor: pointer;
+            }
+        }
+    }
+}
