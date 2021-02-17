@@ -1,0 +1,17 @@
+.content {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 100px;
+    }
+
+    .Photo {
+
+        .img-me-png {
+            animation: photo 5s;
+        }
+    }
+}

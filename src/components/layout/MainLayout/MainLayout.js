@@ -1,18 +1,18 @@
 import React from 'react';
 
-import NavBar from '../NavBar/NavBar';
-import Main from '../Main/Main';
-import Footer from '../Footer/Footer';
+import PageContainer from '../PageContainer/PageContainer';
+import NavBar from '../../features/NavBar/NavBar';
+// import Main from '../../features/Main/Main';
+import Footer from '../../features/Footer/Footer';
 
-const MainLayout = () => {
-
-    return (
-        <div className="MainLayout">
-            <NavBar />
-            <Main />
-            <Footer />
-        </div>
-    );
-}
+const MainLayout = ({ children }) => (
+  <div className="MainLayout">
+    <PageContainer>
+      <NavBar />
+        {children}
+      <Footer />
+    </PageContainer>
+  </div>
+);
 
 export default MainLayout;
